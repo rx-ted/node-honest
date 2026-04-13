@@ -1,0 +1,43 @@
+{
+  "name": "@app/honest-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "engines": {
+    "node": ">=20.11.0",
+    "pnpm": ">=10.0.0"
+  },
+  "scripts": {
+    "clean": "rm -rf dist",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "format": "biome format --write package.json tsconfig.json src",
+    "build": "tsc -p tsconfig.json --noEmit",
+    "lint": "biome lint src --ignore='**/*.test.ts'",
+    "lint:fix": "biome lint src --ignore='**/*.test.ts' --fix",
+    "check": "pnpm lint && pnpm test"
+  },
+  "keywords": [],
+  "files": [
+    "dist"
+  ],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.33.0",
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "biome": "^0.3.3",
+    "lefthook": "^2.1.5",
+    "tsc": "^2.0.4",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.2",
+    "vitest": "^4.1.4",
+    "@hono/node-server": "^1.19.14"
+  },
+  "dependencies": {
+    "hono": "^4.12.12",
+    "reflect-metadata": "^0.2.2"
+  }
+}
