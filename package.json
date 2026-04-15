@@ -1,40 +1,64 @@
 {
-  "name": "@app/honest-node",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "node-honest",
+  "version": "0.0.0",
+  "description": "HonestJS - a modern web framework built on top of Hono and support node.js",
   "type": "module",
   "engines": {
     "node": ">=20.11.0",
     "pnpm": ">=10.0.0"
   },
+  "types": "dist/index.d.ts",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "sideEffects": [
+    "./dist/index.js",
+    "./dist/index.cjs"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rx-ted/node-honest.git"
+  },
   "scripts": {
-    "clean": "rm -rf dist",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
     "format": "biome format --write package.json tsconfig.json src",
-    "build": "tsc -p tsconfig.json --noEmit",
+    "build": "tsup",
     "lint": "biome lint src --ignore='**/*.test.ts'",
     "lint:fix": "biome lint src --ignore='**/*.test.ts' --fix",
-    "check": "pnpm lint && pnpm test"
+    "check": "pnpm format && pnpm lint && pnpm test && pnpm build"
   },
-  "keywords": [],
   "files": [
     "dist"
   ],
-  "author": "",
-  "license": "ISC",
+  "author": "rx-ted",
+  "license": "MIT",
+  "homepage": "https://github.com/rx-ted/node-honest",
+  "keywords": [
+    "nodejs",
+    "deno",
+    "javascript",
+    "typescript",
+    "node",
+    "framework",
+    "web-framework",
+    "hono",
+    "nest",
+    "honest"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  },
   "packageManager": "pnpm@10.33.0",
   "devDependencies": {
+    "@swc/core": "^1.15.26",
     "@types/node": "^25.6.0",
     "biome": "^0.3.3",
     "lefthook": "^2.1.5",
-    "tsc": "^2.0.4",
-    "tsx": "^4.21.0",
-    "typescript": "^6.0.2",
-    "vitest": "^4.1.4",
-    "@hono/node-server": "^1.19.14"
+    "tsup": "^8.5.1",
+    "typescript": "5.9.2",
+    "vitest": "^4.1.4"
   },
   "dependencies": {
     "hono": "^4.12.12",

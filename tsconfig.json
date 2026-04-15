@@ -1,20 +1,20 @@
 {
   "compilerOptions": {
+    "target": "es2022",
+    "module": "ESNext",
     "moduleResolution": "bundler",
+    "strict": true,
+    "declaration": true,
+    "sourceMap": false,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-
-    "target": "es2022",
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
     "rootDir": "./src",
     "outDir": "./dist",
-    "module": "ESNext",
-    "types": ["node"],
-    "lib": ["es2024", "ESNext.Array", "ESNext.Collection", "ESNext.Iterator"],
-    "declaration": true,
-    "strict": true,
-    "verbatimModuleSyntax": true,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
+    
   },
   "include": ["src"],
   "exclude": ["**/*.test.ts"]

@@ -28,38 +28,7 @@
       "trailingCommas": "all"
     }
   },
-  "overrides": [
-    {
-      "include": ["apps/platform-api/**/*.ts"],
-      "javascript": {
-        "formatter": {
-          "quoteStyle": "double"
-        }
-      }
-    },
-    {
-      "include": ["packages/shared/src/global.d.ts"],
-      "linter": {
-        "rules": {
-          "recommended": true,
-          "suspicious": {
-            "noShadowRestrictedNames": "off"
-          }
-        }
-      }
-    },
-    {
-      "include": ["packages/http-decorators/src/**/*.ts"],
-      "linter": {
-        "rules": {
-          "recommended": true,
-          "style": {
-            "useImportType": "off"
-          }
-        }
-      }
-    }
-  ],
+  "overrides": [],
   "json": {
     "formatter": {
       "trailingCommas": "none"
