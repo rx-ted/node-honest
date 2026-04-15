@@ -1,6 +1,6 @@
 {
   "name": "node-honest",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "HonestJS - a modern web framework built on top of Hono and support node.js",
   "type": "module",
   "engines": {
